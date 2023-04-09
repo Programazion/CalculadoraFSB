@@ -9,11 +9,11 @@
 <body>
     <h3>Calculadora</h3>
     <br>
-    <input id="numeroA" value="0"> Número A</input>
+    <input id="numeroA"> Número A</input>
     <br>
     <br>
     <br>
-    <input id="numeroB" value="0"> Número B</input>
+    <input id="numeroB"> Número B</input>
     <br>
     <br>
     <br>
@@ -32,19 +32,44 @@
             console.log("Iniciando suma");
             
             const valorA = document.getElementById("numeroA").value;
-            
             const valorB = document.getElementById("numeroB").value;
+            let campoResultado=document.getElementById("resultadoSuma");
+           
+            console.log("campo resultado =>", typeof campoResultado.value,typeof "")
 
-            const resultado = Number(valorA)+ Number(valorB);
+            //null, "", undefined => if (false)
+            //"" => false =>> !false => true
 
-            if(!valorA){
-                console.log("Valor A es null sin datos", valorA)
+            if(!valorA || !valorB){
+                campoResultado.value = "Faltan datos";
+            }else{
+
+                console.log("procesando resultado")
+                console.log("El valor A es = >", valorA);
+                console.log("El valor B es = >", valorB);
+                campoResultado.value = Number(valorA)+ Number(valorB);
+
             }
 
-            console.log("El resultado es = >", resultado)
+            // if(valorA && valorB){
+            //     console.log("procesando resultado")
+            //     console.log("El valor A es = >", valorA);
+            //     console.log("El valor B es = >", valorB);
+            //     campoResultado.value = Number(valorA)+ Number(valorB);
+                
+            // }
 
-            let campoResultado=document.getElementById("resultadoSuma");
-            campoResultado.value = resultado
+            // if(!valorB){
+            //     console.log("Valor B es null (sin datos)", valorB)
+            //     campoResultado.value = "Ingrese datos => número B";
+            // }
+
+            
+            // const resultado = Number(valorA)+ Number(valorB);
+            // console.log("El resultado es = >", resultado)
+            
+            
+            
        }
     
     </script>

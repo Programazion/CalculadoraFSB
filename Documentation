@@ -9,3 +9,8 @@ console.log("Valor B =>", valorB);
 Number para convertir str to number
 const constantes 
 let variables que cambian de valor
+value=" " para colocar un valor por defecto 
+console.log("Valor A o B es null (sin datos)", valorA)
+var Variables nivel global
+let valor que puede cambiar
+const variable constante
