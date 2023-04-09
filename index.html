@@ -20,6 +20,7 @@
     <button id="suma" onclick="Suma()" >SUMA (+)</button>
     <button id="resta" onclick="Restar()" >RESTA (-)</button>
     <button id="divide" onclick="Dividir()" >DIVIDIR (/)</button>
+    <button id="multiplicar" onclick="Multiplicar()" >MULTIPLICAR (*)</button>
 
     <h1>Resultado:</h1><input id="resultadoSuma"></input>
     
@@ -27,6 +28,29 @@
        
        console.log("Ejecutando código de Java Script!!!")
        
+       // Esta función permite multiplicar
+       function Multiplicar(){ 
+            console.log("Iniciando divide");
+            
+            valorA = document.getElementById("numeroA").value;
+            valorB = document.getElementById("numeroB").value;
+            campoResultado=document.getElementById("resultadoSuma");
+            console.log("campo resultado =>", typeof campoResultado.value,typeof "")
+
+            if(!valorA || !valorB){
+                campoResultado.value = "Faltan datos";
+            }else{
+
+                console.log("procesando resultado")
+                console.log("El valor A es = >", valorA);
+                console.log("El valor B es = >", valorB);
+                campoResultado.value = Number(valorA) * Number(valorB);
+
+            }
+
+        }
+       
+       // Esta función permite dividir
        function Dividir(){ 
             console.log("Iniciando divide");
             
@@ -79,7 +103,7 @@
        
        //console.log("Valor A =>", valorA)
         
-
+        // Esta función permite sumar
        function Suma(){ 
             console.log("Iniciando suma");
             
