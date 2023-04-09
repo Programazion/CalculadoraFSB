@@ -1,0 +1,11 @@
+<h1><h1> Títulos
+<br> Salto de línea
+<input> Caja para ingresar datos
+<button> Botón para ejecutar
+<button id="resultado">RESULTADO (=)</button>
+//Para verificar en consola
+console.log("Valor A =>", valorA); 
+console.log("Valor B =>", valorB);
+Number para convertir str to number
+const constantes 
+let variables que cambian de valor
