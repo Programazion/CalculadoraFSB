@@ -18,16 +18,44 @@
     <br>
     <br>
     <button id="suma" onclick="Suma()" >SUMA (+)</button>
+    <button id="resta" onclick="Restar()" >RESTA (-)</button>
+
     <h1>Resultado:</h1><input id="resultadoSuma"></input>
     
     <script>
        
        console.log("Ejecutando código de Java Script!!!")
        
+       //Esta función es permite
+       function Restar(){ 
+            console.log("Iniciando resta");
+            
+            valorA = document.getElementById("numeroA").value;
+            valorB = document.getElementById("numeroB").value;
+            campoResultado=document.getElementById("resultadoSuma");
+            console.log("campo resultado =>", typeof campoResultado.value,typeof "")
+
+            //null, "", undefined => if (false)
+            //"" => false =>> !false => true
+
+            if(!valorA || !valorB){
+                campoResultado.value = "Faltan datos";
+            }else{
+
+                console.log("procesando resultado")
+                console.log("El valor A es = >", valorA);
+                console.log("El valor B es = >", valorB);
+                campoResultado.value = Number(valorA) - Number(valorB);
+
+            }
+
+        }   
+       
        //const valorA = document.getElementById("numeroA").value; 
        
        //console.log("Valor A =>", valorA)
         
+
        function Suma(){ 
             console.log("Iniciando suma");
             
@@ -67,6 +95,8 @@
             
             // const resultado = Number(valorA)+ Number(valorB);
             // console.log("El resultado es = >", resultado)
+
+        
             
             
             
